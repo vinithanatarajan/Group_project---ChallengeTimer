@@ -2,20 +2,24 @@
 
 class ChallengesController
 
-	def start_timer(params)
+	def start id
 
+			@challenge = Challenge.find(id)
+			@challenge.start_timer
 	end
 
-	def end_timer
+	def end
+		@challenge.end_timer
 
 	end
 
 	def show_list
+		puts Challenge.all
 
 	end
 
 	def print_error
-
+		puts "Error , Chur bro too meke "
 	end
 
 end
