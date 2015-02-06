@@ -32,7 +32,7 @@ end
 
 desc "populate the test database with sample data"
 task "db:seed" do
-  require APP_ROOT.join('db', 'seeds.rb')
+  require APP_ROOT.join('db', 'seed.rb')
 end
 
 desc 'Retrieves the current schema version number'
