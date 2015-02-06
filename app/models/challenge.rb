@@ -11,4 +11,6 @@ class Challenge < ActiveRecord::Base
   def end_timer
     update(time_completed: Time.now)
   end
+
+  
 end
