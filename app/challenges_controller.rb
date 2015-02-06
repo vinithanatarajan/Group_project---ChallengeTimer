@@ -2,7 +2,7 @@
 
 class ChallengesController
 
-	def start_timer
+	def start_timer(params)
 
 	end
 
