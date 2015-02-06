@@ -2,7 +2,7 @@
 require 'time'
 class Challenge < ActiveRecord::Base
   def to_s
-    "#{id}. #{name} #{description} #{formatted_time}"
+    "#{formatted_time} #{id}. #{name} #{description}"
   end
 
   def formatted_time
