@@ -2,11 +2,17 @@
 require 'time'
 class Challenge < ActiveRecord::Base
   def to_s
-    "#{formatted_time} #{id}. #{name} #{description}"
+<<-STRING
+
+#{id}: #{name}
+#{description}
+Time taken: #{formatted_time}
+
+STRING
   end
 
   def formatted_time
-     "Time taken: #{time_completed}s" if time_completed
+     "#{time_completed}s" if time_completed
     end
 
   def start_timer

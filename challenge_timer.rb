@@ -1,14 +1,19 @@
 require_relative 'challenge_router'
 
 challenges_router = ChallengeRouter.new
-
-    puts "Choose a challenge"
+loop do
+    puts "Choose a challenge or exit"
     challenges_router.run({command:"list"})
-    id = gets.chomp.to_i
-    challenges_router.run(error: "Error");return if id == 0
-
+    id = gets.chomp
+  if id == "exit"
+    break
+  elsif id.to_i == 0
+    challenges_router.run()
+  else
     challenges_router.run({command: "start", id:id})
-    puts "type end when finished"
-    input = gets.chomp
-    challenges_router.run({command: "end"})
-    challenges_router.run({command:"completed"})
+    puts "press enter when finished"
+    gets
+      challenges_router.run({command: "end"})
+      challenges_router.run({command:"completed"})
+  end
+end
