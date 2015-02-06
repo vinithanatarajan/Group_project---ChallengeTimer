@@ -1,5 +1,5 @@
-require_relative 'config/application'
-require_relative 'challenges_controller'
+require_relative 'config/application.rb'
+require_relative 'app/controllers/challenges_controller.rb'
 
 challenges_controller = ChallengesController.new
 
